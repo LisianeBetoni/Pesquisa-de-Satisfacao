@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Formulário | HJ</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: linear-gradient(to right, rgb(20, 147, 220), rgb(17, 54, 71));
+        }
+        .box{
+            color: white;
+            position: absolute;
+            top: 52%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            background-color: rgba(4, 206, 95, 0.966);
+            padding: 1.0em;
+            border-radius: 1.2em;
+            width: 20%;
+        }
+        fieldset{
+            border: 0.3em solid rgb(10, 121, 37);
+        }
+        legend{
+            border: 0.1em solid rgb(10, 121, 37);
+            padding: 1em;
+            text-align: center;
+            background-color: rgb(10, 121, 37);
+            border-radius: 0.7em;
+        }
+        .inputBox{
+            position: relative;
+        }
+        .inputUser{
+            background: none;
+            border: none;
+            border-bottom: 0.1em solid white;
+            outline: none;
+            color: white;
+            font-size: 1em;
+            width: 100%;
+            letter-spacing: 0.2em;
+        }
+        .labelInput{
+            position: absolute;
+            top: 0em;
+            left: 0em;
+            pointer-events: none;
+            transition: .5s;
+        }
+        .inputUser:focus ~ .labelInput,
+        .inputUser:valid ~ .labelInput{
+            top: -12em;
+            font-size: 1.6em;
+            color: dodgerblue;
+        }
+        #submit{
+            background-color: rgb(10, 121, 37);
+            width: 100%;
+            border: none;
+            padding: 1.1em;
+            color: white;
+            font-size: 1em;
+            cursor: pointer;
+            border-radius: 0.8em;
+        }
+        #submit:hover{
+            background-color: rgb(10, 121, 37);
+        }
+        
+        .container {
+         margin: 1em 10em;
+        }
+    
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div class="box">
+        <form action="">
+            <fieldset>
+                <legend><b>Pesquisa de Satisfação</b></legend>
+                <br>
+                <div class="inputBox">
+                    <input type="text" name="nome" id="nome" class="inputUser" required>
+                    <label for="nome" class="labelInput">Nome completo</label>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="text" name="email" id="email" class="inputUser" required>
+                    <label for="email" class="labelInput">Email</label>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="tel" name="telefone" id="telefone" class="inputUser" required>
+                    <label for="telefone" class="labelInput">Telefone</label>
+                </div>
+                <p>Como foi seu atendimento pela recepção?</p>
+                <input type="radio" id="otimo" name="avaliacao" value="otimo" required>
+                <label for="otimo">Ótimo</label>                
+                <input type="radio" id="bom" name="avaliacao" value="bom" required>
+                <label for="bom">Bom</label>                
+                <input type="radio" id="regular" name="avaliacao" value="regular" required>
+                <label for="regular">Regular</label>
+                <br><br>
+                <p>Como foi seu atendimento enfermagem?</p>
+                <input type="radio" id="otimo" name="enfermagem" value="otimo" required>
+                <label for="otimo">Ótimo</label>                
+                <input type="radio" id="bom" name="enfermagem" value="bom" required>
+                <label for="bom">Bom</label>                
+                <input type="radio" id="regular" name="enfermagem" value="regular" required>
+                <label for="regular">Regular</label>
+                <br><br>
+                <p>Como foi seu atendimento pelo médico(a)?</p>
+                <input type="radio" id="otimo" name="medico" value="otimo" required>
+                <label for="otimo">Ótimo</label>                
+                <input type="radio" id="bom" name="medico" value="bom" required>
+                <label for="bom">Bom</label>                
+                <input type="radio" id="regular" name="medico" value="regular" required>
+                <label for="regular">Regular</label>
+                <br><br>
+                <p>E quanto a limpeza?</p>
+                <input type="radio" id="otimo" name="limpeza" value="otimo" required>
+                <label for="otimo">Ótimo</label>                
+                <input type="radio" id="bom" name="limpeza" value="bom" required>
+                <label for="bom">Bom</label>                
+                <input type="radio" id="regular" name="limpeza" value="regular" required>
+                <label for="regular">Regular</label>
+                <br><br>                    
+                <input type="submit" name="submit" id="submit">
+            </fieldset>
+        </form>
+    </div>
+    </div>
+</body>
+</html>
